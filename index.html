@@ -1,206 +1,717 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Romane Belausteguy, Ostéopathe D.O. à Cambo-les-Bains. Découvrez son approche, ses soins et prenez rendez-vous en ligne.">
-  <title>Romane Belausteguy - Ostéopathe D.O.</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romane Belausteguy - Ostéopathe à Cambo-les-Bains</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #2c3e3a;
+        }
 
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #1e2b26;
-      color: #f5f5f5;
-    }
-    header {
-      background-color: #111;
-      color: #F2C21A;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: #f5f5f5;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #F2C21A;
-    }
-    .hero {
-      background: url('cambo-les-bains.jpg') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      animation: fadeIn 2s ease-out;
-      padding: 0 1rem;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      color: #fff;
-      background-color: rgba(0,0,0,0.6);
-      padding: 1.5rem;
-      font-family: 'Playfair Display', serif;
-      border-radius: 8px;
-    }
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 900px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    h3 {
-      color: #F2C21A;
-      margin-bottom: 1rem;
-      font-family: 'Playfair Display', serif;
-    }
-    p {
-      line-height: 1.6;
-    }
-    footer {
-      background-color: #111;
-      padding: 2rem;
-      text-align: center;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-    .button {
-      background-color: #F2C21A;
-      color: #000;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-    .button:hover {
-      background-color: #e6b816;
-    }
-    .about-container {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .about-container img {
-      width: 100%;
-      max-width: 250px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      flex-shrink: 0;
-    }
-    .about-container p {
-      flex: 1;
-      min-width: 250px;
-    }
-    @media screen and (max-width: 600px) {
-      .hero h2 {
-        font-size: 1.8rem;
-        padding: 1rem;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(1.05);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-  </style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #2c3e3a;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border-bottom: 1px solid #445954;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e9c46a;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e9c46a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #f4a261;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f4a261;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44,62,58,0.8), rgba(44,62,58,0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232c3e3a" width="1200" height="600"/><path fill="%23354a45" d="M0,300 Q300,150 600,300 T1200,300 V600 H0 Z"/><path fill="%23445954" d="M0,400 Q300,250 600,400 T1200,400 V600 H0 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #e9c46a;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e9c46a, #f4a261);
+            color: #2c3e3a;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 196, 106, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 196, 106, 0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            background: #2c3e3a;
+        }
+
+        section:nth-child(even) {
+            background: #354a45;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #e9c46a;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #e9c46a, #f4a261);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #e9c46a;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e9c46a;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #fff;
+        }
+
+        .formations, .experiences {
+            margin-top: 2rem;
+        }
+
+        .formations h4, .experiences h4 {
+            color: #e9c46a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .formations ul, .experiences ul {
+            list-style: none;
+        }
+
+        .formations li, .experiences li {
+            padding: 0.5rem 0;
+            border-left: 3px solid #e9c46a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        /* Osteopathy Section */
+        .osteopathy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .definition-card {
+            background: #445954;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-left: 5px solid #e9c46a;
+        }
+
+        .definition-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #e9c46a;
+        }
+
+        .definition-card p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #fff;
+        }
+
+        .approach-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .approach-list li {
+            padding: 0.5rem 0;
+            border-left: 3px solid #e9c46a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        /* Consultations Section */
+        .consultations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .consultation-card {
+            background: #445954;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .consultation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .consultation-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #e9c46a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .consultation-card ul {
+            list-style: none;
+        }
+
+        .consultation-card li {
+            padding: 0.3rem 0;
+            border-left: 2px solid #e9c46a;
+            padding-left: 1rem;
+            margin-bottom: 0.3rem;
+            color: #fff;
+        }
+
+        /* Frequency Section */
+        .frequency-content {
+            background: #445954;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .frequency-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background: #2c3e3a;
+            color: #fff;
+        }
+
+        .frequency-item strong {
+            color: #e9c46a;
+            min-width: 200px;
+        }
+
+        .warning {
+            background: #3d4a45;
+            border: 1px solid #e9c46a;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .warning p {
+            margin: 0.5rem 0;
+            color: #fff;
+        }
+
+        /* Info Section */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .info-card {
+            background: #445954;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #e9c46a;
+        }
+
+        .info-card p {
+            color: #fff;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e9c46a;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .contact-info strong {
+            color: #e9c46a;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a2622;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #e9c46a;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #f4a261;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .osteopathy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Icon styles */
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Romane Belausteguy</h1>
-    <nav>
-      <a href="#apropos">À propos</a>
-      <a href="#osteopathie">L'ostéopathie</a>
-      <a href="#infos">Infos pratiques</a>
-      <a href="https://www.doctolib.fr/osteopathe/bar-sur-seine/romane-belausteguy/booking/motives?specialityId=10&telehealth=false&placeId=practice-526090&pid=practice-526090&bookingFunnelSource=profile" class="button">Prendre RDV</a>
-    </nav>
-  </header>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">ROMANE BELAUSTEGUY</a>
+            <ul class="nav-links">
+                <li><a href="#about">À PROPOS</a></li>
+                <li><a href="#osteopathy">L'OSTÉOPATHIE</a></li>
+                <li><a href="#consultations">CONSULTATIONS</a></li>
+                <li><a href="#info">INFOS PRATIQUES</a></li>
+                <li><a href="#contact">PRENDRE RDV</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="hero">
-  <h2>Ostéopathe D.O. à Cambo-les-Bains</h2>
-</div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Romane Belausteguy</h1>
+            <h2>Ostéopathe</h2>
+            <h2>à Cambo-les-Bains</h2>
+            <p>Cabinet ouvert du lundi au samedi, prise en charge uniquement sur rendez-vous.</p>
+            <a href="#contact" class="cta-button">PRENDRE RENDEZ-VOUS</a>
+        </div>
+    </section>
 
-  <section id="apropos">
-  <h3>À propos</h3>
-  <div style="display: flex; flex-direction: row; gap: 2rem; align-items: center; flex-wrap: wrap;">
-    <img src="romane.jpg" alt="Portrait de Romane Belausteguy" style="width: 250px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
-    <p style="flex: 1; min-width: 250px;">Ostéopathe diplômée, Romane Belausteguy vous accueille à Cambo-les-Bains dans un cadre calme et professionnel. Elle pratique une ostéopathie douce, adaptée à chaque patient.</p>
-  </div>
-</section>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">À PROPOS</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><circle cx='150' cy='150' r='150' fill='%23f4a261'/><circle cx='150' cy='120' r='50' fill='%23e76f51'/><rect x='125' y='180' width='50' height='80' fill='%23e76f51'/><rect x='110' y='200' width='20' height='60' fill='%23e76f51'/><rect x='170' y='200' width='20' height='60' fill='%23e76f51'/></svg>" alt="Romane Belausteguy">
+                </div>
+                <div class="about-text">
+                    <h3>Ostéopathe diplômée depuis 2020</h3>
+                    <p>Diplômée à Ostéobio, école biomécanique de Arcueil Cachan, je vous accueille dans mon cabinet à Cambo-les-Bains pour une prise en charge personnalisée et adaptée à vos besoins.</p>
+                    
+                    <div class="formations">
+                        <h4>Formations :</h4>
+                        <ul>
+                            <li>Ostéopathe pédiatrique : de la petite enfance à l'adolescence - CFPCO</li>
+                            <li>Massage bébé - École Naître et Sens</li>
+                            <li>Freins restrictifs buccaux et allaitement - Institut au sein en douceur</li>
+                        </ul>
+                    </div>
 
-  <section id="osteopathie">
-    <h3>L’ostéopathie</h3>
-    <p>L’ostéopathie est une thérapie manuelle visant à restaurer la mobilité des structures du corps. Elle s’adresse à tous : nourrissons, enfants, adultes, femmes enceintes, sportifs et seniors.</p>
-  </section>
+                    <div class="experiences">
+                        <h4>Expériences :</h4>
+                        <ul>
+                            <li><strong>Depuis janvier 2024 :</strong> Cabinet d'ostéopathie à Cambo les Bains</li>
+                            <li><strong>2020 à 2023 :</strong> Cabinet libéral et au centre d'une maison de santé à Lusigny sur Barse et Saint parres aux Tertres</li>
+                            <li><strong>2020 à 2022 :</strong> Cabinet d'ostéopathie à Bar sur Seine</li>
+                            <li><strong>2019 à 2020 :</strong> Praticienne au centre hospitalier des Quatre villes à Saint Cloud</li>
+                            <li><strong>2018 à 2020 :</strong> Ostéopathe pour le Club de Rugby de Champigny sur marne et le Club de Volley de Vélizy-Villacoublay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="infos">
-    <h3>Infos pratiques</h3>
-    <p><strong>Adresse :</strong> Rue Palassinborda, Entrée B sonnette B15, 64250 Cambo-les-Bains</p>
-    <p><strong>Téléphone :</strong> <a href="tel:+33683954941" style="color:#F2C21A;">06 83 95 49 41</a></p>
-    <p><strong>Prise de rendez-vous :</strong> <a href="https://www.doctolib.fr/osteopathe/bar-sur-seine/romane-belausteguy/booking/motives?specialityId=10&telehealth=false&placeId=practice-526090&pid=practice-526090&bookingFunnelSource=profile" target="_blank" class="button">Doctolib</a></p>
-  </section>
+    <section id="osteopathy">
+        <div class="container">
+            <h2 class="section-title">L'OSTÉOPATHIE</h2>
+            <div class="osteopathy-grid">
+                <div class="definition-card">
+                    <h3>Qu'est ce que c'est ?</h3>
+                    <p>L'ostéopathie est une pratique de santé de première intention, accessible sans prescription médicale.</p>
+                    <p>Elle consiste en une <strong>prise en charge globale</strong> des troubles fonctionnels, principalement <strong>musculo-squelettiques et digestifs</strong>, par des techniques <strong>exclusivement manuelles</strong>.</p>
+                    
+                    <p style="margin-top: 1.5rem;">L'approche se fonde sur :</p>
+                    <ul class="approach-list">
+                        <li>Un <strong>diagnostic clinique</strong> approfondi</li>
+                        <li>Un traitement par <strong>mobilisation et manipulation manuelle</strong></li>
+                        <li>Une <strong>dimension préventive</strong>, incluant conseils ergonomiques et suivi personnalisé</li>
+                    </ul>
+                </div>
+                
+                <div class="definition-card">
+                    <h3>Motifs de consultations</h3>
+                    <p>L'ostéopathie peut vous aider dans de nombreuses situations, pour tous les âges de la vie.</p>
+                    <p>Que ce soit pour traiter des douleurs aigües, améliorer votre bien-être au quotidien, ou dans le cadre d'un suivi préventif, l'ostéopathie offre des solutions naturelles et efficaces.</p>
+                    <p style="margin-top: 1rem; font-style: italic;">Découvrez ci-dessous les principales indications selon votre profil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    &copy; 2025 Romane Belausteguy - Ostéopathe D.O. | Site réalisé avec passion
-  </footer>
+    <section id="consultations">
+        <div class="container">
+            <h2 class="section-title">MOTIFS DE CONSULTATIONS</h2>
+            <div class="consultations-grid">
+                <div class="consultation-card">
+                    <h3>👨‍💼 Adultes</h3>
+                    <ul>
+                        <li>Douleurs lombaires, dorsales, cervicales</li>
+                        <li>Troubles articulaires (épaule, genou, cheville...)</li>
+                        <li>Sciatiques, lumbagos</li>
+                        <li>Maux de tête, migraines</li>
+                        <li>Troubles digestifs (ballonnements, reflux, constipation)</li>
+                        <li>Stress, troubles du sommeil</li>
+                        <li>Séquelles de traumatismes ou accidents</li>
+                    </ul>
+                </div>
 
-  <script>
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+                <div class="consultation-card">
+                    <h3>👶 Nourrissons</h3>
+                    <ul>
+                        <li>Accouchement difficile ou instrumentalisé</li>
+                        <li>Plagiocéphalie (tête plate)</li>
+                        <li>Troubles du sommeil, pleurs inexpliqués</li>
+                        <li>Régurgitations, coliques</li>
+                        <li>Difficultés de succion ou d'allaitement</li>
+                    </ul>
+                </div>
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
+                <div class="consultation-card">
+                    <h3>🤰 Femmes enceintes</h3>
+                    <ul>
+                        <li>Douleurs lombaires ou pelviennes</li>
+                        <li>Sciatiques de grossesse</li>
+                        <li>Suivi de grossesse pour un meilleur confort</li>
+                        <li>Préparation à l'accouchement</li>
+                        <li>Accompagnement post-partum</li>
+                    </ul>
+                </div>
+
+                <div class="consultation-card">
+                    <h3>👦 Enfants / Adolescents</h3>
+                    <ul>
+                        <li>Troubles de la posture</li>
+                        <li>Scoliose ou douleurs de croissance</li>
+                        <li>Troubles ORL chroniques (otites, rhinites...)</li>
+                        <li>Troubles de la concentration ou du sommeil</li>
+                    </ul>
+                </div>
+
+                <div class="consultation-card">
+                    <h3>🏃‍♂️ Sportifs</h3>
+                    <ul>
+                        <li>Préparation à l'effort</li>
+                        <li>Amélioration des performances</li>
+                        <li>Récupération après blessure</li>
+                        <li>Suivi régulier de l'activité physique</li>
+                    </ul>
+                </div>
+
+                <div class="consultation-card">
+                    <h3>💻 Travail sédentaire / postures prolongées</h3>
+                    <ul>
+                        <li>Tensions musculaires liées au poste de travail</li>
+                        <li>Troubles musculo-squelettiques (TMS)</li>
+                        <li>Fatigue visuelle, maux de tête</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="frequency">
+        <div class="container">
+            <h2 class="section-title">QUELLE FRÉQUENCE POUR LES VISITES ?</h2>
+            <div class="frequency-content">
+                <h3 style="margin-bottom: 2rem; color: #e9c46a;">Situation et Recommandation :</h3>
+                
+                <div class="frequency-item">
+                    <strong>Douleur aiguë</strong>
+                    <span>→ 1 à 3 séances rapprochées</span>
+                </div>
+                
+                <div class="frequency-item">
+                    <strong>Entretien préventif</strong>
+                    <span>→ 1 à 2 fois par an</span>
+                </div>
+                
+                <div class="frequency-item">
+                    <strong>Grossesse</strong>
+                    <span>→ 1 séance par trimestre + 1 en post-partum</span>
+                </div>
+                
+                <div class="frequency-item">
+                    <strong>Sportifs réguliers</strong>
+                    <span>→ Tous les 4-5 mois selon intensité</span>
+                </div>
+                
+                <div class="frequency-item">
+                    <strong>Enfants (croissance)</strong>
+                    <span>→ 1 à 2 fois par an, ou selon besoin</span>
+                </div>
+                
+                <div class="frequency-item">
+                    <strong>Nourrissons</strong>
+                    <span>→ Dès le premier mois, puis selon indication</span>
+                </div>
+
+                <div class="warning">
+                    <p><strong>⚠️ Important :</strong> La durée entre deux séances est en général de 2 à 3 semaines, sauf urgence ou protocole spécifique.</p>
+                    <p><strong>⚠️ Important :</strong> L'ostéopathie ne remplace pas un suivi médical. En cas de doute, douleur persistante ou pathologie lourde, il est essentiel de consulter votre médecin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="info">
+        <div class="container">
+            <h2 class="section-title">INFOS PRATIQUES</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>💰 Tarifs & Modalités de paiement</h3>
+                    <div class="price">60€</div>
+                    <p>la séance</p>
+                    <p><strong>Durée moyenne :</strong> 40 à 50min</p>
+                    
+                    <h4 style="margin-top: 2rem; color: #e76f51;">Moyens de paiement acceptés :</h4>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li>✓ Chèque</li>
+                        <li>✓ Espèces</li>
+                        <li>✓ Virement bancaire (sur demande préalable)</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>📋 Remboursement des séances</h3>
+                    <p>L'ostéopathie n'est <strong>pas remboursée par la Sécurité sociale</strong>.</p>
+                    <p>En revanche, de <strong>nombreuses mutuelles</strong> proposent une prise en charge partielle ou totale de vos consultations. Le remboursement dépend de votre contrat : nombre de séances/an, montant forfaitaire, etc.</p>
+                    <p style="margin-top: 1rem;"><strong>💡 Conseil :</strong> N'hésitez pas à vous renseigner auprès de votre complémentaire santé.</p>
+                    <p><strong>📄 Une note d'honoraires conforme</strong> vous sera fournie après chaque séance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">PRENDRE RENDEZ-VOUS</h2>
+            <div class="contact-info" style="text-align: center; background: #445954; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                <p style="color: #fff;"><strong>Adresse :</strong> Rue Palassinborda, Entrée B sonnette B15, 64250 Cambo-les-Bains</p>
+                <p style="color: #fff;"><strong>Téléphone :</strong> <a href="tel:0683954941" style="color: #e9c46a; text-decoration: none;">06 83 95 49 41</a></p>
+                <p style="margin-top: 2rem; color: #fff;"><strong>Prise de rendez-vous :</strong></p>
+                <a href="#" class="cta-button" style="margin-top: 1rem; display: inline-block;">DOCTOLIB</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Romane Belausteguy - Ostéopathe à Cambo-les-Bains</p>
+                <div class="footer-links">
+                    <a href="#about">À propos</a>
+                    <a href="#osteopathy">L'ostéopathie</a>
+                    <a href="#consultations">Consultations</a>
+                    <a href="#info">Infos pratiques</a>
+                    <a href="tel:0683954941">06 83 95 49 41</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
